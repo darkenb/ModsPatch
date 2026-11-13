@@ -6,15 +6,15 @@ using BepInEx.Bootstrap;
 using BepInEx.Logging;
 using HarmonyLib;
 
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
-[assembly: AssemblyInformationalVersion("1.0.0")]
+[assembly: AssemblyVersion("1.0.1.0")]
+[assembly: AssemblyFileVersion("1.0.1.0")]
+[assembly: AssemblyInformationalVersion("1.0.1")]
 
 namespace ModsPatch
 {
     // Fixes for other mods, applied to their original Thunderstore releases at runtime. No mod file is changed.
     // Each target mod is one module: it is patched completely or not at all, and only when that mod is installed.
-    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.0")]
+    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.1")]
     [BepInDependency(UXAssistFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(LaserClearingFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(PlanetFinderFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
