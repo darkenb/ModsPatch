@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyName>BUG_ModsPatch</AssemblyName>
+    <LangVersion>latest</LangVersion>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>  <!-- versions are set in src/Plugin.cs -->
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>  <!-- the publicizer needs it to reach private members -->
+    <!-- Override for your install: dotnet build -c Release "-p:DSPGamePath=..." "-p:BepInExCorePath=..." "-p:PluginsPath=..." -->
+    <DSPGamePath Condition="'$(DSPGamePath)' == ''">D:\Games\Dyson Sphere Program</DSPGamePath>
+    <BepInExCorePath Condition="'$(BepInExCorePath)' == ''">$(APPDATA)\com.kesomannen.gale\dyson-sphere-program\profiles\Default\BepInEx\core</BepInExCorePath>
+    <PluginsPath Condition="'$(PluginsPath)' == ''">$(APPDATA)\com.kesomannen.gale\dyson-sphere-program\profiles\Default\BepInEx\plugins</PluginsPath>
+    <ManagedPath>$(DSPGamePath)\DSPGAME_Data\Managed</ManagedPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="BepInEx.AssemblyPublicizer.MSBuild" Version="0.4.2" PrivateAssets="all" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="$(ManagedPath)\Assembly-CSharp.dll" Private="false" Publicize="true" />
+    <Reference Include="$(ManagedPath)\UnityEngine*.dll" Private="false" />
+    <Reference Include="$(BepInExCorePath)\BepInEx.dll" Private="false" />
+    <Reference Include="$(BepInExCorePath)\0Harmony.dll" Private="false" />
+    <Reference Include="$(PluginsPath)\soarqin-UXAssist\UXAssist.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\starfi5h-LaserClearing\LaserClearing.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\hetima-PlanetFinder\PlanetFinder.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\starfi5h-BuildToolOpt\BuildToolOpt.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\blacksnipebiu-Auxilaryfunction\Auxilaryfunction.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\blacksnipebiu-Multfuntion_mod\Multifunction_mod.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\jinxOAO-MoreMegaStructure\MoreMegaStructure.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\appuns-DSPAllPlanetInfo\DSPAllPlanetInfo.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\appuns-DSPBigInventory\DSPBigInventory.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\starfi5h-MassRecipePaste\MassRecipePaste.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\nebula-NebulaMultiplayerModApi\NebulaAPI.dll" Private="false" />
+    <Reference Include="$(PluginsPath)\CommonAPI-DSPModSave\DSPModSave.dll" Private="false" />
+    <Reference Include="$(PluginsPath)\CommonAPI-CommonAPI\CommonAPI.dll" Private="false" />
+  </ItemGroup>
+</Project>
