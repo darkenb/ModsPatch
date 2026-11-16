@@ -14,7 +14,7 @@ namespace ModsPatch
     {
         public const string Target = "Gnimaerd.DSP.plugin.MoreMegaStructure";
 
-        public static bool AlreadyFixed() => AccessTools.Method(typeof(UIStatisticsPatcher), "CalculatorFactoryPrefix") != null;
+        public static bool AlreadyFixed() => typeof(UIStatisticsPatcher).GetMethod("CalculatorFactoryPrefix", AccessTools.all) != null;
 
         // MMS's old prefix ran one virtual factory and returned false, skipping the native calculator tick.
         [HarmonyPrefix, HarmonyPatch(typeof(UIStatisticsPatcher), nameof(UIStatisticsPatcher.ProductionExtraInfoCalculator_GameTick_Prefix))]

@@ -11,7 +11,7 @@ namespace ModsPatch
     {
         public const string Target = "com.hetima.dsp.LSTM";
 
-        public static bool AlreadyFixed() => AccessTools.Method(typeof(Util), "FindLoggedStation") != null;
+        public static bool AlreadyFixed() => typeof(Util).GetMethod("FindLoggedStation", AccessTools.all) != null;
 
         public static StationComponent FindStation(GalacticTransport transport, int gid)
         {

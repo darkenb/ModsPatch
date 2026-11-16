@@ -9,7 +9,7 @@ namespace ModsPatch
     {
         public const string Target = "starfi5h.plugin.BuildToolOpt";
 
-        public static bool AlreadyFixed() => AccessTools.Field(typeof(ReplaceStationLogic), "replacingTransport") != null;
+        public static bool AlreadyFixed() => typeof(ReplaceStationLogic).GetField("replacingTransport", AccessTools.all) != null;
 
         static PlanetTransport replacingTransport;
         static int replacingStationId;

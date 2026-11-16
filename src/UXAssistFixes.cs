@@ -14,7 +14,7 @@ namespace ModsPatch
     {
         public const string Target = "org.soardev.uxassist";
 
-        public static bool AlreadyFixed() => AccessTools.Method(typeof(LogisticsPatch), "MissingWorkers") != null;
+        public static bool AlreadyFixed() => typeof(LogisticsPatch).GetMethod("MissingWorkers", AccessTools.all) != null;
 
         // Auxilaryfunction 3.1 keeps its station overlay switch in AuxConfig; UXAssist looked only in the plugin class
         // ("Failed to get ShowStationInfo from Auxilaryfunction") and lost the logistics info panel toggle.

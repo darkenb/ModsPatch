@@ -12,7 +12,7 @@ namespace ModsPatch
     {
         public const string Target = "Appun.DSP.plugin.AllPlanetInfo";
 
-        public static bool AlreadyFixed() => AccessTools.Field(typeof(InfoCreater), "startSlotNo") != null;
+        public static bool AlreadyFixed() => typeof(InfoCreater).GetField("startSlotNo", AccessTools.all) != null;
 
         [HarmonyPrefix, HarmonyPatch(typeof(Hook), nameof(Hook.UIStarDetail_Prefix))]
         static bool NoHistoryPrefix(ref int __state, ref bool __result)

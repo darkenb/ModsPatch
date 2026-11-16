@@ -8,7 +8,7 @@ namespace ModsPatch
     {
         public const string Target = "starfi5h.plugin.MassRecipePaste";
 
-        public static bool AlreadyFixed() => AccessTools.Method(typeof(Patches), "CountSuccessfulPaste") != null;
+        public static bool AlreadyFixed() => typeof(Patches).GetMethod("CountSuccessfulPaste", AccessTools.all) != null;
 
         // Its UIRealtimeTip.Popup prefix reads the paste tool, which exists only in a loaded game: every popup outside one
         // (for example ErrorAnalyzer's "copied" tip on the start-up error screen) threw a NullReferenceException.

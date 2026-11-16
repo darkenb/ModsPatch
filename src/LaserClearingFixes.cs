@@ -12,7 +12,7 @@ namespace ModsPatch
     {
         public const string Target = "starfi5h.plugin.LaserClearing";
 
-        public static bool AlreadyFixed() => AccessTools.Field(typeof(LocalLaser_Patch), "laserTargets") != null;
+        public static bool AlreadyFixed() => typeof(LocalLaser_Patch).GetField("laserTargets", AccessTools.all) != null;
 
         static readonly List<int> laserIds = new();
         static readonly Dictionary<int, int> laserTargets = new();  // laser id -> plant id
