@@ -29,6 +29,7 @@
     <Reference Include="$(PluginsPath)\appuns-DSPAllPlanetInfo\DSPAllPlanetInfo.dll" Private="false" Publicize="true" />
     <Reference Include="$(PluginsPath)\appuns-DSPBigInventory\DSPBigInventory.dll" Private="false" Publicize="true" />
     <Reference Include="$(PluginsPath)\starfi5h-MassRecipePaste\MassRecipePaste.dll" Private="false" Publicize="true" />
+    <Reference Include="$(PluginsPath)\hetima-LSTM\LSTM.dll" Private="false" Publicize="true" />
     <Reference Include="$(PluginsPath)\nebula-NebulaMultiplayerModApi\NebulaAPI.dll" Private="false" />
     <Reference Include="$(PluginsPath)\CommonAPI-DSPModSave\DSPModSave.dll" Private="false" />
     <Reference Include="$(PluginsPath)\CommonAPI-CommonAPI\CommonAPI.dll" Private="false" />

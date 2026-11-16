@@ -25,6 +25,7 @@ namespace ModsPatch
     [BepInDependency(AllPlanetInfoFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(BigInventoryFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(MassRecipePasteFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(LSTMFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     public class Plugin : BaseUnityPlugin
     {
         public const string Guid = "bug.dsp.modspatch";
@@ -42,6 +43,7 @@ namespace ModsPatch
             new Module("AllPlanetInfo", AllPlanetInfoFixes.Target, "1.1.14", AllPlanetInfoFixes.AlreadyFixed, typeof(AllPlanetInfoFixes)),
             new Module("BigInventory", BigInventoryFixes.Target, "1.0.8", BigInventoryFixes.AlreadyFixed, typeof(BigInventoryFixes)),
             new Module("MassRecipePaste", MassRecipePasteFixes.Target, "1.1.3", MassRecipePasteFixes.AlreadyFixed, typeof(MassRecipePasteFixes)),
+            new Module("LSTM", LSTMFixes.Target, "0.9.6", LSTMFixes.AlreadyFixed, typeof(LSTMFixes)),
         };
 
         void Awake()

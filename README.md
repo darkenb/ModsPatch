@@ -24,6 +24,7 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 | DSPAllPlanetInfo 1.1.14 | Stars no longer stay fully revealed after a panel error |
 | DSPBigInventory 1.0.8 | Loading never deletes items; cells keep their place; research upgrades work again |
 | MassRecipePaste 1.1.3 | No error from messages shown outside a loaded game |
+| LSTM 0.9.6 | Traffic log station filters pick the right side; removed or rebuilt stations no longer break the log window |
 
 ## UXAssist 1.6.3
 
@@ -85,12 +86,18 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 
 - Messages that pop up outside a loaded game (for example on the start-up error screen) no longer cause an error.
 
+## LSTM 0.9.6
+
+- "Filter demand station" and "Filter supply station" in the traffic log pick the right station. Before, for trips that started at the supply station, each picked the other side.
+- The traffic log window no longer throws an error when the station it is filtered by has been removed, or when a star, planet or item it shows no longer exists.
+- Locate buttons in the traffic log no longer jump to a newer station that took over the number of a removed one on another planet.
+
 ## Licences
 
 BUG_ModsPatch is MIT licensed. It contains no code, DLLs, images or other files of the mods it fixes. Each fix is a Harmony patch that runs while the game runs; where a fix replaces a method, the replacement is written for this mod. The fixed mods stay under their own terms:
 
 - UXAssist (Soar Qin), LaserClearing, BuildToolOpt and MassRecipePaste (starfi5h): MIT
-- PlanetFinder (hetima): Unlicense
+- PlanetFinder and LSTM (hetima): Unlicense
 - Auxilaryfunction and Multifunction (blacksnipebiu), MoreMegaStructure (jinxOAO), DSPAllPlanetInfo and DSPBigInventory (appuns): no licence published; nothing of them is included, they are only patched at runtime
 
 These fixes are not made, reviewed or endorsed by the authors of those mods. Please report problems with them here, not to them.
