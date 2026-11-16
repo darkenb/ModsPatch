@@ -3,6 +3,7 @@
 ## 1.0.2
 
 - New: LSTM 0.9.6 fixes (traffic log station filters, removed or rebuilt stations, missing star/planet/item names).
+- README: explains what happens on other versions of the fixed mods.
 - MoreMegaStructure fixes now target 2.0.3 (its statistics code is unchanged, so the same fixes still apply).
 
 ## 1.0.1

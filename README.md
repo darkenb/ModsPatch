@@ -2,7 +2,7 @@
 
 Fixes for other mods, applied while the game runs. No mod file is changed: removing this mod gives you the plain mods back.
 
-Each mod is patched separately and only when it is installed. If a mod is not the version a fix was written for, that mod's fixes are not applied, and the BepInEx log says so. Layout and display fixes for these mods are in [BUG_UIFix](https://thunderstore.io/c/dyson-sphere-program/p/BUG/BUG_UIFix/).
+Each mod is patched separately and only when it is installed. The fixes are written for the versions listed below, but they are not tied to them: on another version they are applied as long as every patched method is still found. If one is missing, all of that mod's fixes are removed again and the mod runs as it is; if the mod already contains the fixes, nothing is patched. The BepInEx log says which of these happened. Layout and display fixes for these mods are in [BUG_UIFix](https://thunderstore.io/c/dyson-sphere-program/p/BUG/BUG_UIFix/).
 
 This mod only applies fixes. It adds no features of its own and contains no files of the mods it fixes; it does not replace or install them.
 
