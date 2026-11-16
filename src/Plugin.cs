@@ -6,15 +6,15 @@ using BepInEx.Bootstrap;
 using BepInEx.Logging;
 using HarmonyLib;
 
-[assembly: AssemblyVersion("1.0.1.0")]
-[assembly: AssemblyFileVersion("1.0.1.0")]
-[assembly: AssemblyInformationalVersion("1.0.1")]
+[assembly: AssemblyVersion("1.0.2.0")]
+[assembly: AssemblyFileVersion("1.0.2.0")]
+[assembly: AssemblyInformationalVersion("1.0.2")]
 
 namespace ModsPatch
 {
     // Fixes for other mods, applied to their original Thunderstore releases at runtime. No mod file is changed.
     // Each target mod is one module: it is patched completely or not at all, and only when that mod is installed.
-    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.1")]
+    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.2")]
     [BepInDependency(UXAssistFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(LaserClearingFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(PlanetFinderFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
@@ -38,7 +38,7 @@ namespace ModsPatch
             new Module("BuildToolOpt", BuildToolOptFixes.Target, "1.2.0", BuildToolOptFixes.AlreadyFixed, typeof(BuildToolOptFixes)),
             new Module("Auxilaryfunction", AuxilaryfunctionFixes.Target, "3.1.1", AuxilaryfunctionFixes.AlreadyFixed, typeof(AuxilaryfunctionFixes)),
             new Module("Multifunction", MultifunctionFixes.Target, "4.0.8", MultifunctionFixes.AlreadyFixed, typeof(MultifunctionFixes)),
-            new Module("MoreMegaStructure", MoreMegaStructureFixes.Target, "2.0.2", MoreMegaStructureFixes.AlreadyFixed, typeof(MoreMegaStructureFixes)),
+            new Module("MoreMegaStructure", MoreMegaStructureFixes.Target, "2.0.3", MoreMegaStructureFixes.AlreadyFixed, typeof(MoreMegaStructureFixes)),
             new Module("AllPlanetInfo", AllPlanetInfoFixes.Target, "1.1.14", AllPlanetInfoFixes.AlreadyFixed, typeof(AllPlanetInfoFixes)),
             new Module("BigInventory", BigInventoryFixes.Target, "1.0.8", BigInventoryFixes.AlreadyFixed, typeof(BigInventoryFixes)),
             new Module("MassRecipePaste", MassRecipePasteFixes.Target, "1.1.3", MassRecipePasteFixes.AlreadyFixed, typeof(MassRecipePasteFixes)),

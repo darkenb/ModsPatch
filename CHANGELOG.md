@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.2
+
+MoreMegaStructure fixes now target 2.0.3 (its statistics code is unchanged, so the same fixes still apply).
+
 ## 1.0.1
 
 README links to the other BUG mods point to the BUG team on Thunderstore.

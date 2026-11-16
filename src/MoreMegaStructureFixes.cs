@@ -7,7 +7,7 @@ using MoreMegaStructure;
 
 namespace ModsPatch
 {
-    // MoreMegaStructure 2.0.2 (Thunderstore).
+    // MoreMegaStructure 2.0.3 (Thunderstore; the patched methods are unchanged since 2.0.2).
     // Interstellar assembly stats use virtual factory indices past GameData.factories; they are routed to MMS inside the
     // game's own calculator loop instead of a prefix that skipped the loop (and its begin/end callbacks) for that tick.
     public static class MoreMegaStructureFixes

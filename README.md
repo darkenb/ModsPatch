@@ -20,7 +20,7 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 | BuildToolOpt 1.2.0 | Station replace keeps its drones, ships and warpers; refunds after a failed replace |
 | Auxilaryfunction 3.1.1 | Auto-fill only on your own planet and within capacity; hand and logistic slots used; any star fuel |
 | Multifunction 4.0.8 | Inventory shrink never deletes items; recipe changes undone correctly; handcraft of intermediates |
-| MoreMegaStructure 2.0.2 | Interstellar assembly statistics no longer drop a tick of all statistics |
+| MoreMegaStructure 2.0.3 | Interstellar assembly statistics no longer drop a tick of all statistics |
 | DSPAllPlanetInfo 1.1.14 | Stars no longer stay fully revealed after a panel error |
 | DSPBigInventory 1.0.8 | Loading never deletes items; cells keep their place; research upgrades work again |
 | MassRecipePaste 1.1.3 | No error from messages shown outside a loaded game |
@@ -65,7 +65,7 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 - Recipe changes are applied again whenever the replicator opens.
 - Bulk foundation adds the removed plants to your vegetation collection.
 
-## MoreMegaStructure 2.0.2
+## MoreMegaStructure 2.0.3
 
 - Interstellar assembly statistics are calculated inside the game's own statistics update. Before, the mod skipped that update for a tick, and the rest of the statistics for that tick were lost.
 - A star whose megastructure is no longer an interstellar assembly stops showing its old production speeds.
