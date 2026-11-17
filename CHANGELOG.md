@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- New: DSPReplicatorPlus 0.0.3 fix. Adding a recipe "to head" no longer counts on items the tasks behind it will make later; the new head used to wait for them forever and the queue stopped.
+- DSPReplicatorPlus: MAX adds the real most, up to 99999 batches, the number BUG_UIFix shows above the craft button; it added 1000 when the game showed ">999".
+
 ## 1.0.2
 
 - New: LSTM 0.9.6 fixes (traffic log station filters, removed or rebuilt stations, missing star/planet/item names).

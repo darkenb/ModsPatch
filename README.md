@@ -25,6 +25,7 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 | DSPBigInventory 1.0.8 | Loading never deletes items; cells keep their place; research upgrades work again |
 | MassRecipePaste 1.1.3 | No error from messages shown outside a loaded game |
 | LSTM 0.9.6 | Traffic log station filters pick the right side; removed or rebuilt stations no longer break the log window |
+| DSPReplicatorPlus 0.0.3 | "To head" no longer stops the replicator queue; MAX adds the real most |
 
 ## UXAssist 1.6.3
 
@@ -92,13 +93,18 @@ Each fix works as a patch on its own mod only; you do not need all of these mods
 - The traffic log window no longer throws an error when the station it is filtered by has been removed, or when a star, planet or item it shows no longer exists.
 - Locate buttons in the traffic log no longer jump to a newer station that took over the number of a removed one on another planet.
 
+## DSPReplicatorPlus 0.0.3
+
+- Adding a recipe "to head" no longer counts on items the tasks behind it will make later. The new head task used to wait for those items forever and the queue stopped.
+- MAX adds the real most, up to 99999 batches: the number BUG_UIFix shows above the craft button. When the game showed ">999" it added 1000.
+
 ## Licences
 
 BUG_ModsPatch is MIT licensed. It contains no code, DLLs, images or other files of the mods it fixes. Each fix is a Harmony patch that runs while the game runs; where a fix replaces a method, the replacement is written for this mod. The fixed mods stay under their own terms:
 
 - UXAssist (Soar Qin), LaserClearing, BuildToolOpt and MassRecipePaste (starfi5h): MIT
 - PlanetFinder and LSTM (hetima): Unlicense
-- Auxilaryfunction and Multifunction (blacksnipebiu), MoreMegaStructure (jinxOAO), DSPAllPlanetInfo and DSPBigInventory (appuns): no licence published; nothing of them is included, they are only patched at runtime
+- Auxilaryfunction and Multifunction (blacksnipebiu), MoreMegaStructure (jinxOAO), DSPAllPlanetInfo, DSPBigInventory and DSPReplicatorPlus (appuns): no licence published; nothing of them is included, they are only patched at runtime
 
 These fixes are not made, reviewed or endorsed by the authors of those mods. Please report problems with them here, not to them.
 

@@ -6,15 +6,15 @@ using BepInEx.Bootstrap;
 using BepInEx.Logging;
 using HarmonyLib;
 
-[assembly: AssemblyVersion("1.0.2.0")]
-[assembly: AssemblyFileVersion("1.0.2.0")]
-[assembly: AssemblyInformationalVersion("1.0.2")]
+[assembly: AssemblyVersion("1.0.3.0")]
+[assembly: AssemblyFileVersion("1.0.3.0")]
+[assembly: AssemblyInformationalVersion("1.0.3")]
 
 namespace ModsPatch
 {
     // Fixes for other mods, applied to their original Thunderstore releases at runtime. No mod file is changed.
     // Each target mod is one module: it is patched completely or not at all, and only when that mod is installed.
-    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.2")]
+    [BepInPlugin(Guid, "BUG_ModsPatch", "1.0.3")]
     [BepInDependency(UXAssistFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(LaserClearingFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(PlanetFinderFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
@@ -26,6 +26,7 @@ namespace ModsPatch
     [BepInDependency(BigInventoryFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(MassRecipePasteFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     [BepInDependency(LSTMFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
+    [BepInDependency(ReplicatorPlusFixes.Target, BepInDependency.DependencyFlags.SoftDependency)]
     public class Plugin : BaseUnityPlugin
     {
         public const string Guid = "bug.dsp.modspatch";
@@ -44,6 +45,7 @@ namespace ModsPatch
             new Module("BigInventory", BigInventoryFixes.Target, "1.0.8", BigInventoryFixes.AlreadyFixed, typeof(BigInventoryFixes)),
             new Module("MassRecipePaste", MassRecipePasteFixes.Target, "1.1.3", MassRecipePasteFixes.AlreadyFixed, typeof(MassRecipePasteFixes)),
             new Module("LSTM", LSTMFixes.Target, "0.9.6", LSTMFixes.AlreadyFixed, typeof(LSTMFixes)),
+            new Module("ReplicatorPlus", ReplicatorPlusFixes.Target, "0.0.3", ReplicatorPlusFixes.AlreadyFixed, typeof(ReplicatorPlusFixes)),
         };
 
         void Awake()

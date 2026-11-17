@@ -1,6 +1,6 @@
 {
     "name": "BUG_ModsPatch",
-    "version_number": "1.0.2",
+    "version_number": "1.0.3",
     "website_url": "https://github.com/darkenb/ModsPatch",
     "description": "Fixes for other Dyson Sphere Program mods, applied at runtime. The mods themselves are not changed.",
     "dependencies": [
